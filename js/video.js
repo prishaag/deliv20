@@ -31,7 +31,7 @@ document.getElementById("pause").addEventListener("click", function() {
 
 
 
-document.getElementById("faster").addEventListener("click", function() {
+document.getElementById("faster").addEventListener("click", function() { //used chat gpt to help debug this function- it wasn't working intitially
     console.log("Speed Up");
     video.playbackRate += 0.1;
     console.log("New Speed: " + video.playbackRate.toFixed(1));
@@ -46,7 +46,7 @@ document.getElementById("slower").addEventListener("click", function() {
 
 
 
-document.getElementById("skip").addEventListener("click", function() {
+document.getElementById("skip").addEventListener("click", function() { //used chat gpt to help debug this function- it wasn't working intitially bc i hadnt put currtime + 10 <video duration
     console.log("Skip Ahead");
     if (video.currentTime + 10 < video.duration) {
         video.currentTime += 10;
@@ -68,9 +68,9 @@ document.getElementById("mute").addEventListener("click", function() {
     }
 });
 
-var slider = document.getElementById("slider");
+var slider = document.getElementById("slider"); 
 var volumeDisplay = document.getElementById("volume");
-slider.addEventListener("input", function() {
+slider.addEventListener("input", function() { //used chat gpt to help debug this bc my volume wasnt changing  
     video.volume = slider.value / 100;
     updateVolume();
 });
