@@ -30,7 +30,7 @@ document.getElementById("pause").addEventListener("click", function() {
 });
 
 
-
+//citing for chatgpt: (ChatGPT, personal communication, November 7, 2023)
 document.getElementById("faster").addEventListener("click", function() { //used chat gpt to help debug this function- it wasn't working intitially
     console.log("Speed Up");
     video.playbackRate += 0.1;
@@ -45,7 +45,7 @@ document.getElementById("slower").addEventListener("click", function() {
 
 
 
-
+//citing for chatgpt: (ChatGPT, personal communication, November 7, 2023)
 document.getElementById("skip").addEventListener("click", function() { //used chat gpt to help debug this function- it wasn't working intitially bc i hadnt put currtime + 10 <video duration
     console.log("Skip Ahead");
     if (video.currentTime + 10 < video.duration) {
@@ -70,6 +70,7 @@ document.getElementById("mute").addEventListener("click", function() {
 
 var slider = document.getElementById("slider"); 
 var volumeDisplay = document.getElementById("volume");
+//citing for chatgpt: (ChatGPT, personal communication, November 7, 2023)
 slider.addEventListener("input", function() { //used chat gpt to help debug this bc my volume wasnt changing  
     video.volume = slider.value / 100;
     updateVolume();
